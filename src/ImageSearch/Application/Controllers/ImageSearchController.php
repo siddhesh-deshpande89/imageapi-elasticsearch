@@ -21,6 +21,6 @@ class ImageSearchController extends Controller
     {
         $result = $this->imageSearchService->search($request->keyword);
 
-        return response()->json($result);
+        return response()->json(['data' => $result]);
     }
 }
